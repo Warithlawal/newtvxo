@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TVXO - Store</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/127aef0c53.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-462758aa1e172f82d39e1ea35e919e0a.css?vsn=d">
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css">
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
+
+  <link
+    rel="stylesheet"
+    href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+</head>
+
+<body>
+	<div id="loader" class="loader">
+	  <img src="images/tvxo.png" alt="Loading..." class="loader-img" />
+	</div>
+	<div class="carousel-bar">
+	  <div class="carousel-track">
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	    <p>ELYSIAN 25</p>
+	  </div>
+	</div>
+
+	<nav>
+	  <div class="logo">
+	    <a href="index.html"><img class="logo-img" src="images/tvxo.png"></a>
+
+			<div class="mobile-menu" id="mobileMenu">
+		    <ul id="navLinks" class="hidden">
+		    	<i class="fa-thin fa-times" id="closeMenu"></i>
+		    	<li>
+			      <div class="search-container">
+						  <i class="fa-solid fa-magnifying-glass search-icon"></i>
+						  <input type="text" id="searchInput" placeholder="Search">
+						  <ul id="searchResults" class="search-results-popup"></ul>
+						</div>
+					</li>
+		      <li>
+		        <a href="#" id="toggleCategories">
+		          categories <span id="toggleIcon">+</span>
+		        </a>
+		        <ul id="categoryListHome" class="category-hidden">
+						  <li><a href="products.html?category=Shirts">Shirts</a></li>
+						  <li><a href="products.html?category=Jackets">Jackets</a></li>
+						  <li><a href="products.html?category=Headwears">Headwears</a></li>
+						  <li><a href="products.html?category=Trousers">Trousers</a></li>
+						  <li><a href="products.html?category=Slides">Slides</a></li>
+						  <li><a href="products.html?category=Socks">Socks</a></li>
+						  <li><a href="products.html?category=Tanks">Tanks</a></li>
+						  <li><a href="products.html?category=Hoodies">Hoodies</a></li>
+						</ul>
+		      </li>
+		      <li><a href="products.html">all products</a></li>
+		      <li><a href="about.html">about</a></li>
+		    </ul>
+		  </div>
+		</div>
+
+	  <div class="home">
+	  	<i class="fa-thin fa-bars menu-toggle" id="menuToggle"></i>
+	    <a class="cart" href="cart.html"><i class="fa-light fa-bag-shopping"></i></a>
+	    <p class="cart-number">0</p>
+	  </div>
+	</nav>
+
+	<section class="catandpro-section">
+		<div class="category-section">
+			<div class="cat-btn" id="toggleCategory">
+				<h3 class="category-header">Categories</h3>
+				<span><i class="fa-light fa-chevron-down"></i></span>
+			</div>
+				<ul class="category-list" id="categoryList">
+				  <li><a href="#" data-category="All">All</a></li>
+				  <li><a href="#" data-category="Shirts">Shirts</a></li>
+				  <li><a href="#" data-category="Jackets">Jackets</a></li>
+				  <li><a href="#" data-category="Headwears">Headwears</a></li>
+				  <li><a href="#" data-category="Trousers">Trousers</a></li>
+				  <li><a href="#" data-category="Slides">Slides</a></li>
+				  <li><a href="#" data-category="Socks">Socks</a></li>
+				  <li><a href="#" data-category="Tanks">Tanks</a></li>
+				  <li><a href="#" data-category="Hoodies">Hoodies</a></li>
+				</ul>
+		</div>
+
+		<div class="products-container"  id="product-list">
+
+		</div>
+	</section>
+<footer>
+		<div class="footer">
+			<div class="footer-logo">
+				<img src="images/tvxo.png">
+				<div class="contact-icon">
+					<a href="mailto:tvxolux.com" target="_blank"><i class="fa-thin fa-envelopes"></i></a>
+					<a href="https://www.instagram.com/tvxo_lux?igsh=MWJzNXp3OXF6Ynh5bw%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram" aria-label="Instagram"></i></a>
+				</div>
+			</div>
+
+			<div class="subscribe">
+				<div id="newsletter-section">
+				  <form id="mc-ajax-form"
+				        class="validate"
+				        novalidate>
+				    
+				    <div class="form-group">
+				      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+				      <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL" required>
+				    </div>
+
+				    <div aria-hidden="true" style="position:absolute; left:-5000px;">
+				      <input type="text" name="b_cd1caec1a725c24cf1352aa5e_40ddc036fa" tabindex="-1" value="">
+				    </div>
+
+				    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="subscribe-btn">
+				      Subscribe
+				    </button>
+				    <small class="helper_text">By subscribing, you agree to receive emails about TVXO.</small>
+
+				    <div id="mce-responses" class="responses">
+				      <div class="response" id="mce-error-response"></div>
+				      <div class="response" id="mce-success-response"></div>
+				    </div>
+				  </form>
+				</div>
+
+				<a href="https://drive.google.com/file/d/1zsUz701MPf-kiTjgWWRaRUVdl_syny_2/view?usp=sharing" target="_blank">TERMS & CONDITIONS</a>
+			</div>
+		</div>
+
+		<hr>
+		<p class="c-align">(C) 2025, TVXO </p>
+	</footer>
+</body>
+	<script type="module" src="firebase.js"></script>
+	<script type="module" src="products.js"></script>
+ <script src="shared.js"></script>
+</html>
