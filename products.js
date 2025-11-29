@@ -50,7 +50,7 @@ function displayProducts(products) {
   container.innerHTML = "";
 
   if (products.length === 0) {
-    container.innerHTML = "<p>No products found for this category.</p>";
+    container.innerHTML = '<p class="empty">No products found for this category.</p>';
     return;
   }
 
@@ -115,17 +115,41 @@ function displayProducts(products) {
 function setupCategoryFilters() {
   const categoryLinks = document.querySelectorAll(".category-list a");
 
+  // Get category from URL (if any)
+  const params = new URLSearchParams(window.location.search);
+  const urlCategory = params.get("category");
+
+  if (urlCategory) {
+    // Remove active from all
+    categoryLinks.forEach(l => l.classList.remove("active"));
+
+    // Make correct category active
+    const activeLink = document.querySelector(`.category-list a[data-category="${urlCategory}"]`);
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
+
+    // Show only that category
+    const filtered = allProducts.filter(
+      p => p.category?.toLowerCase() === urlCategory.toLowerCase()
+    );
+    displayProducts(filtered);
+  } else {
+    // No category in URL → All products
+    const allLink = document.querySelector(`.category-list a[data-category="All"]`);
+    if (allLink) allLink.classList.add("active");
+    displayProducts(allProducts);
+  }
+
+  // Normal click behaviour
   categoryLinks.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const category = link.getAttribute("data-category");
 
-      // Remove .active from all
       categoryLinks.forEach(l => l.classList.remove("active"));
-      // Add to clicked
       link.classList.add("active");
 
-      // Filter products
       if (category === "All") {
         displayProducts(allProducts);
       } else {
@@ -135,21 +159,14 @@ function setupCategoryFilters() {
         displayProducts(filtered);
       }
 
-      // Optionally update URL without reload
-      const newUrl = category === "All" ? "products.html" : `products.html?category=${category}`;
+      // Update URL without reload
+      const newUrl =
+        category === "All"
+          ? "products.html"
+          : `products.html?category=${category}`;
       window.history.pushState({}, "", newUrl);
     });
   });
 }
 
-function setupToggleCategory() {
-  const toggleBtn = document.getElementById("toggleCategory");
-  const categoryList = document.getElementById("categoryList");
 
-  if (toggleBtn && categoryList) {
-    toggleBtn.addEventListener("click", () => {
-      categoryList.classList.toggle("show");
-      toggleBtn.classList.toggle("active");
-    });
-  }
-}

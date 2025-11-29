@@ -80,8 +80,8 @@ async function loadProduct() {
 
         const li = document.createElement("li");
         li.innerHTML = `
-          <a href="#" class="${stock === 0 ? "disabled-size" : ""}">
-            ${size}${stock === 0 ? " (Out of stock)" : ""}
+          <a href="#" onclick="return false;" class="${stock === 0 ? "disabled-size" : ""}">
+            ${size}
           </a>
         `;
 

@@ -170,7 +170,7 @@ function payWithPaystack(email, amount, onSuccess, onFailure) {
   }
 
   const handler = PaystackPop.setup({
-    key: 'pk_live_4421e13b348210296bc86970eb27f550d3b8c709',
+    key: 'pk_test_63726895d0ff99d1bf79d5bc412851cd63e3b3fa',
     email: email,
     amount: Math.floor(amount * 100),
     currency: "NGN",

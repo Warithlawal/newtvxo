@@ -225,6 +225,7 @@ nav {
   top: 26px;
   width: 100%;
   z-index: 200;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo {
@@ -394,7 +395,7 @@ nav {
 .media {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	margin-top: 10px;
+	margin-top: 130px;
 	gap: 2px;
 	height: 100%;
 }
@@ -424,7 +425,7 @@ nav {
 
 .home-products-container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
 	margin: 40px 20px 30px;
 }
@@ -433,6 +434,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	cursor: pointer;
 }
 
 .home-products-card  img {
@@ -634,6 +636,14 @@ nav {
 	text-align: left;
 }
 
+.empty {
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eef1f6;
+  font-size: 15px;
+}
+
 /*-----------------------------------------------------------ProductPage-------------------------------------------*/
 
 .back-link {
@@ -675,15 +685,17 @@ nav {
 	object-fit: contain;
 	transition: transform 0.2s ease, transform-origin 0s;
 	transform-origin: center center;
-	cursor: zoom-in; /* show zoom cursor */
+	cursor: zoom-in;
+	padding: 0 20px;
 }
 
 
 .images-preview {
   display: flex;
   gap: 10px;
-  justify-content: center; /* center below the main image */
+  justify-content: center;
   margin-top: 10px;
+  padding: 0 20px;
 }
 
 .previews {
@@ -1129,7 +1141,7 @@ nav {
 }
 
 .do-you-agree label a {
-	color: white;
+	color: black;
 }
 
 .do-you-agree {
@@ -1507,6 +1519,13 @@ footer hr {
 	}
 }
 
+@media only screen and (max-width: 850px) {
+	.previews {
+	  width: 70px;
+	  height: 70px;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 
   .checkout-layout {
@@ -1578,6 +1597,7 @@ footer hr {
 
 	.product-page-container {
 		flex-direction: column;
+		gap: 40px;
 	}
 
 	.product-page-image {
@@ -1628,6 +1648,16 @@ footer hr {
 
 	.you-may-like-container {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer {
+		flex-direction: column;
+		gap: 30px;
+		padding: 35px 20px;
+	}
+
+	.subscribe a {
+		margin: 0 auto;
 	}
 }
 
